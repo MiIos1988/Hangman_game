@@ -1,9 +1,12 @@
 let wordsDiv = document.querySelector(".words");
 let btn = document.querySelector(".btn")
 let fault = 10;
-let text = document.querySelector(".text")
+let text = document.querySelector(".gameOver")
 let attempts = document.querySelector(".attempts")
 let input = document.querySelector(".inp")
+let newGame = document.querySelector(".newGame")
+let msg = document.querySelector(".msg")
+
 
 let words = ["odlican", "prinesi", "aspekt", "dodaj", "obnoviti", "tuziti", "osoblje", "intrige"];
 
@@ -37,12 +40,16 @@ btn.addEventListener("click", () => {
     if (!arrawWords.includes(seletLetter)) {
         fault--
         if (fault < 1) {
-            text.innerHTML = "GAME OVER"
+            msg.style.display = "block"
             btn.disabled = true;
         }
     }
 
     attempts.innerHTML = `Reamining number of attempts: ${fault}`
     input.value = ''
+}
+)
+newGame.addEventListener("click", () => {
+    location.reload()
 }
 )

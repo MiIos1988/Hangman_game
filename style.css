@@ -66,3 +66,21 @@ body {
     color: white;
     padding: 10px;
 }
+
+.gameOver {
+    font-size: 5rem;
+    color: white;
+}
+
+.msg {
+    display: none;
+}
+
+.newGame {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(35, 115, 121);
+    color: white;
+    font-size: 2rem;
+}
