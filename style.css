@@ -75,6 +75,9 @@ body {
 .msg {
     display: none;
 }
+.win{
+    display: none;
+}
 
 .newGame {
     padding: 5px 15px;
