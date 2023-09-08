@@ -24,15 +24,15 @@ for (const letter of randomWords) {
 }
 
 let span = document.querySelectorAll(".span")
-attempts.innerHTML = `Reamining number of attempts: ${fault}`
+attempts.innerHTML = `Remaining number of attempts: ${fault}`
 
 btn.addEventListener("click", () => {
 
-    let seletLetter = input.value;
+    let selectLetter = input.value;
 
     for (let i = 0; i < randomWords.length; i++) {
-        if (randomWords[i] === seletLetter) {
-            span[i].innerHTML = seletLetter
+        if (randomWords[i] === selectLetter) {
+            span[i].innerHTML = selectLetter
         }
     }
 let niz=[]
@@ -48,9 +48,9 @@ let niz=[]
             input.disabled = true;
     }
 
-    let arrawWords = [...randomWords]
+    let arrowWords = [...randomWords]
 
-    if (!arrawWords.includes(seletLetter) && seletLetter !=='') {
+    if (!arrowWords.includes(selectLetter) && selectLetter !=='') {
         fault--
         
         if (fault < 1) {
