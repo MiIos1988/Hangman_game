@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
 
-<body>
+  <body>
     <article class="container">
-        <div>
-            <input maxlength="1" type="text" class="inp" placeholder="Guess the one letter">
-            <button class="btn">check</button>
-        </div>
-        <p class="attempts"></p>
+      <div>
+        <input
+          maxlength="1"
+          type="text"
+          class="inp"
+          placeholder="Guess the one letter"
+        />
+        <button class="btn">check</button>
+      </div>
+      <p class="attempts"></p>
 
-        <div class="words">
+      <div class="words"></div>
+      <div class="msg">
+        <p class="gameOver">GAME OVER</p>
+        <button class="newGame">New game</button>
+      </div>
 
-        </div>
-        <div class="msg">
-            <p class="gameOver">GAME OVER</p>
-            
-            <button class="newGame" >New game</button>
-        </div>
-
-        <div class="win">
-            <p class="gameOver">YOU WON</p>
-            <button class="newGame startGame" >New game</button>
-        </div>
+      <div class="win">
+        <p class="gameOver">YOU WON</p>
+        <button class="newGame startGame">New game</button>
+      </div>
     </article>
 
-    <script src="main.js"></script>
-</body>
-
+    <script src="./src/main.js"></script>
+  </body>
 </html>
