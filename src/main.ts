@@ -37,7 +37,7 @@ for (const letter of randomWords) {
   span.classList.add("span");
   wordsDiv.appendChild(span);
 }
-const span = document.querySelectorAll(".span");
+const span:  NodeListOf<HTMLSpanElement> = document.querySelectorAll(".span");
 attempts.innerHTML = `Remaining number of attempts: ${fault}`;
 
 btn.addEventListener("click", () => {
@@ -48,14 +48,14 @@ btn.addEventListener("click", () => {
       span[i].innerHTML = selectLetter;
     }
   }
-  let niz = [];
+  let arr = [];
 
-  span.forEach((e) => {
+  span.forEach((e: HTMLSpanElement) => {
     if (e.innerText !== "") {
-      niz.push(e);
+      arr.push(e);
     }
   });
-  if (niz.length === randomWords.length) {
+  if (arr.length === randomWords.length) {
     if (win !== null) {
       win.style.display = "block";
       btn.disabled = true;

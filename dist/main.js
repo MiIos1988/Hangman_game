@@ -43,13 +43,13 @@ btn.addEventListener("click", () => {
             span[i].innerHTML = selectLetter;
         }
     }
-    let niz = [];
+    let arr = [];
     span.forEach((e) => {
         if (e.innerText !== "") {
-            niz.push(e);
+            arr.push(e);
         }
     });
-    if (niz.length === randomWords.length) {
+    if (arr.length === randomWords.length) {
         if (win !== null) {
             win.style.display = "block";
             btn.disabled = true;
