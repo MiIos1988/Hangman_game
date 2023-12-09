@@ -2,6 +2,7 @@
 const wordsDiv = document.querySelector(".words");
 const btn = document.querySelector(".btn");
 let fault = 10;
+const displayWord = document.querySelector(".displayWord");
 const text = document.querySelector(".gameOver");
 const attempts = document.querySelector(".attempts");
 const input = document.querySelector(".inp");
@@ -64,6 +65,9 @@ btn.addEventListener("click", () => {
                 msg.style.display = "block";
                 btn.disabled = true;
                 input.disabled = true;
+                if (displayWord !== null) {
+                    displayWord.innerHTML = randomWords;
+                }
             }
         }
     }

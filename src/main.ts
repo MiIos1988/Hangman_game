@@ -3,6 +3,7 @@ type DivField = HTMLDivElement | null;
 const wordsDiv = document.querySelector(".words")!;
 const btn: HTMLButtonElement = document.querySelector(".btn")!;
 let fault = 10;
+const displayWord = document.querySelector(".displayWord");
 const text = document.querySelector(".gameOver");
 const attempts = document.querySelector(".attempts")!;
 const input: HTMLInputElement = document.querySelector(".inp")!;
@@ -73,6 +74,9 @@ btn.addEventListener("click", () => {
         msg.style.display = "block";
         btn.disabled = true;
         input.disabled = true;
+        if(displayWord !== null) {
+            displayWord.innerHTML = randomWords;
+        }
       }
     }
   }
